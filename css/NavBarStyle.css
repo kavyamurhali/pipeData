@@ -1,0 +1,154 @@
+#titlebar{
+    /*background: -webkit-linear-gradient(#f2f2f2, #efefef);*/
+    /*background: -o-linear-gradient(#f2f2f2, #efefef); !* For Opera 11.1 to 12.0 *!*/
+    /*background: -moz-linear-gradient(#f2f2f2, #efefef); !* For Firefox 3.6 to 15 *!*/
+    /*background: linear-gradient(#f2f2f2, #efefef); !* Standard syntax (must be last) *!*/
+    background-color: white;
+    border-bottom: 2px solid #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 49px;
+    margin: 6px 6px 0px 6px;
+    align-items: center;
+}
+span:hover {
+    overflow: visible;
+}
+.toolbar{
+    top: 49px;
+    z-index: 10;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    background: rgba(27, 79, 117, 0.8);
+    /*position: absolute;*/
+}
+.navbar {
+    flex-direction:column;
+    display: -webkit-flex;
+    display: flex;
+}
+.navbar {
+    /*min-height: 46px;*/
+    margin-bottom: 7px;
+}
+#titledivleft {
+    padding-left: 10px;
+}
+.titileDivright{
+    flex-flow: row-reverse;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*change from column list to row and remove bullets*/
+.titileDivright ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+.webLink{
+    color: #97a7bf;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 2px;
+}
+p#citytagname {
+    font-family: Serif;
+    font-size: 17px;
+    color: rgb(72, 114, 144);
+    padding-left: 5px;
+    margin-top: -5px;
+    margin-bottom: 2px;
+}
+/*change add | content before every li element in navList but not first element*/
+.titileDivright li:not(:first-child):before {
+    content: "|";
+    color: #bdc6d4;
+}
+.navList{
+    margin:0;
+    display: -webkit-flex; /* Safari */
+    /*-webkit-flex-direction: row-reverse; !* Safari 6.1+ *!*/
+    display: flex;
+    /*flex-direction: row-reverse;*/
+}
+#companylogo{
+    margin-right: 15px;
+    margin-top: 9px;
+    height: 22px;
+    width: 165px;
+}
+span#titlelast {
+    color: #ababad;
+    font-family: segoe UI;
+    font-size: 22px;
+    font-weight: lighter;
+}
+#titlename{
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 24px;
+    padding-left: 5px;
+}
+.link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    /*background: seagreen;*/
+    color: white;
+}
+.flex{
+    display: -webkit-flex;
+    display: flex;
+    /*margin-bottom: 1px;*/
+}
+#Projectlogo {
+    width: 20em;
+}
+#websecnebtn{
+    margin-left: 4px;
+    font-weight: 600;
+    color: #4a7594;
+}
+button#sometext {
+    font-weight: 600;
+    color: #4a7594;
+}
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    height: 250px;
+    /*border: 1rem solid #e9e9ed;*/
+}
+#p_name {
+    margin-left: 38px;
+}
+p.appTitle{
+    margin-top: -47px;
+    margin-left: -30px;
+}
+
+/*Grid*/
+.ui.grid {
+    /*margin-top: 2rem;*/
+}
+/* conflicts with Data Source Option Modal */
+/* .ui.buttons .button:first-child {
+    background-color: #f3f1f1 !important;
+} */
+.ui.sub.header {
+    color: rgb(72, 114, 144);
+}
+
+#titlefirst{
+    color: #1b4f75;font-family: Helvetica;font-weight: 600;
+}
