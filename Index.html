@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+	<title>Xylem-Puretech Limited</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xylem</title>
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- <link href="http://code.google.com//apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css"> -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="dist/jquery.mmenu.css" />
+	<script src="js/theme_config.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="css/module.css">
+	<link rel="stylesheet" href="css/chosen.css">
+	<script src="js/chosen.jquery.js"></script>
+	<link rel="stylesheet" href="css/dashboard.css">
+	<script type="text/javascript" src="js/chartcolourchanger.js"></script>
+	<script type="text/javascript" src="js/crossfilter.js"></script>
+	<script type="text/javascript" src="js/d3.js"></script>
+	<script type="text/javascript" src="js/dc.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/d3_v5.min.js"></script>
+	<script type="text/javascript" src="js/d3plus.js"></script>
+	<script type="text/javascript" src="js/d3.parcoords_2.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/dc.css">
+</head>
+
+<body class="sidebar-is-expanded menu-toggle-switch1-not menu-toggle-switch2-not">
+	<header class="l-header">
+		<div class="l-header_inner ">
+			<div class="header-left">
+				<div class="c-header-icon js-hamburger" id="hamburgerDiv">
+					<div class="hamburger-toggle is-opened" >
+						<!--<span class="bar-top"></span><span class="bar-mid"></span><span class="bar-bot"></span>-->
+						<img src="images/ic_appsRightMenu.png">
+					</div>
+				</div>
+				<div class="logo">
+					<a href="index.html">
+						<div class="logoimage"></div>
+					</a>
+				</div>
+			</div>
+			<div class="user-dashboard header-text">
+
+			</div>
+
+			<a href="#metrics" class="profile-ico">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path d="M0 0h24v24H0V0z" class="icon"></path>
+					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" style="
+					fill: #007da3;
+				"></path></svg>
+
+			</a>
+			</div>
+		</div>
+
+		<div class="l-underheader" id="underheader">
+			<div class="l-under-texts">
+				<p class="l-under-text1">RiskView</p>
+				<p class="l-under-text2">Advanced Infrastructure Analytics</p>
+			</div>
+			<div class="l-under-img"></div>
+		</div>
+	</header>
+
+
+	<div class="l-sidebar" id="sidebarDiv">
+
+		<div class="l_sidebar_content modulebar">
+			<nav class="c-menu js-menu">
+				<ul class="u-list">
+					<li class="c-menu_item " data-module="spatial" data-toggle="tooltip" id="spatialAn">
+
+						<div class="c-menu_item_inner">
+							<div class="analysisClass">
+								<div class="material-icons mat-ico">language</div>
+								<div class="icoBg"></div>
+							</div>
+							<div class="c-menu-item_title"><span>Spatial Analysis</span></div>
+						</div>
+					</li>
+					<li class="c-menu_item " data-module="metrics" data-toggle="tooltip"  id="secondEl">
+
+						<div class="c-menu_item_inner">
+							<div id="metricsicon" class="analysisClass">
+								<div class="material-icons mat-ico">insert_chart</div>
+								<div class="icoBg"></div>
+							</div>
+
+							<svg xmlns="http://www.w3.org/2000/svg" id="metricsloader" width="40px" height="50px"
+								viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ellipsis"
+								style="background: none;display: none;">
+								<!--circle(cx="16",cy="50",r="10")-->
+								<circle cx="84" cy="50" r="0" fill="#ffffff">
+									<animate attributeName="r" values="10;0;0;0;0" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="0s" />
+									<animate attributeName="cx" values="84;84;84;84;84" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="0s" />
+								</circle>
+								<circle cx="38.5776" cy="50" r="10" fill="#ffffff">
+									<animate attributeName="r" values="0;10;10;10;0" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="-1.7s" />
+									<animate attributeName="cx" values="16;16;50;84;84" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="-1.7s" />
+								</circle>
+								<circle cx="16" cy="50" r="6.64048" fill="#ffffff">
+									<animate attributeName="r" values="0;10;10;10;0" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="-0.85s" />
+									<animate attributeName="cx" values="16;16;50;84;84" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="-0.85s" />
+								</circle>
+								<circle cx="84" cy="50" r="3.35952" fill="#ffffff">
+									<animate attributeName="r" values="0;10;10;10;0" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="0s" />
+									<animate attributeName="cx" values="16;16;50;84;84" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="0s" />
+								</circle>
+								<circle cx="72.5776" cy="50" r="10" fill="#ffffff">
+									<animate attributeName="r" values="0;0;10;10;10" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="0s" />
+									<animate attributeName="cx" values="16;16;16;50;84" keyTimes="0;0.25;0.5;0.75;1"
+										keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+										dur="3.4s" repeatCount="indefinite" begin="0s" />
+								</circle>
+							</svg>
+							<div class="c-menu-item_title"><span>Key Metrics</span></div>
+						</div>
+					</li>
+					<li class="c-menu_item " data-module="Meters_analysis" data-toggle="tooltip" id="MainBreakAn">
+
+						<div class="c-menu_item_inner">
+							<div class="analysisClass">
+								<div class="material-icons mat-ico">input</div>
+								<div class="icoBg"></div>
+							</div>
+							<div class="c-menu-item_title"><span>Data Analysis</span></div>
+						</div>
+
+					</li>
+
+
+				</ul>
+			</nav>
+		</div>
+		<div class="l_sidebar_content bottom_theme_bar">
+			<nav class="c-menu js-menu">
+				<ul class="u-list">
+					<select id="themetype" data-placeholder="Theme Type" class="chosen-select chosen-rtl">
+						<option value="light">Light</option>
+						<option value="dark"> Dark</option>
+					</select>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="main-content-div" id="main-content-div">
+		<div class="mainstage l-main background spc" id="bg-main">
+			<!-- <div class="bg-img" style="visibility: hidden; height: 40vh !important;"></div> -->
+			<div class="bg-card card" id="bg-card"></div>
+			<div class="main-title">
+				<h5 class="headcol"></h5>
+				<h1 class="headcol"></h1>
+				<p class="headcol"></p>
+
+				<!--button type="button" class="btn btn-primary btn-loader border-btns" data-toggle="modal" data-target="#optionmodal">Launch</button-->
+				<!-- <button type="button" class="launch-button" id="launch-btn">
+					<span>Launch</span>
+				</button> -->
+			</div>
+			<div class="content-wrapper content-wrapper-with-bg" style="display: none;">
+				<div class="user-dashboard position-relative" id="titleDiv">
+					<h4>Spatial Analysis</h4>
+					<div class="c-header-icon js-hamburger moveHamburger" id="oldHamb">
+						<div class="hamburger-toggle is-opened">
+							<span class="bar-top"></span>
+							<span class="bar-mid"></span>
+							<span class="bar-bot"></span>
+						</div>
+					</div>
+					<div class="c-header-icon js-hamburger" id="newHamb">
+						<div class="hamburger-toggle" id="innerHambNew">
+							<span class="bar-top"></span>
+							<span class="bar-mid"></span>
+							<span class="bar-bot"></span>
+						</div>
+					</div>
+					<div class="risk-break-switch">
+						<a class="risk-break-single risk-break-active" id="riskactive" href="#" data-type="risk">Risk Analysis</a>
+						<a class="risk-break-single" id="breakactive" href="#" data-type="break">
+							<span>Break History</span>
+							<svg xmlns="http://www.w3.org/2000/svg" id="breakloader" width="40px" height="50px"
+									viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ellipsis" style="background: none;display:none">
+									<!--circle(cx="16",cy="50",r="10")-->
+									<circle cx="84" cy="50" r="0" fill="#ffffff">
+										<animate attributeName="r" values="10;0;0;0;0" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="0s" />
+										<animate attributeName="cx" values="84;84;84;84;84" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="0s" />
+									</circle>
+									<circle cx="38.5776" cy="50" r="10" fill="#ffffff">
+										<animate attributeName="r" values="0;10;10;10;0" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="-1.7s" />
+										<animate attributeName="cx" values="16;16;50;84;84" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="-1.7s" />
+									</circle>
+									<circle cx="16" cy="50" r="6.64048" fill="#ffffff">
+										<animate attributeName="r" values="0;10;10;10;0" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="-0.85s" />
+										<animate attributeName="cx" values="16;16;50;84;84" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="-0.85s" />
+									</circle>
+									<circle cx="84" cy="50" r="3.35952" fill="#ffffff">
+										<animate attributeName="r" values="0;10;10;10;0" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="0s" />
+										<animate attributeName="cx" values="16;16;50;84;84" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="0s" />
+									</circle>
+									<circle cx="72.5776" cy="50" r="10" fill="#ffffff">
+										<animate attributeName="r" values="0;0;10;10;10" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="0s" />
+										<animate attributeName="cx" values="16;16;16;50;84" keyTimes="0;0.25;0.5;0.75;1"
+											keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" calcMode="spline"
+											dur="3.4s" repeatCount="indefinite" begin="0s" />
+									</circle>
+								</svg>
+						</a>
+						<a class="risk-break-single" id="breakuploadactive" href="#" style="display: none" data-type="breakuploaded">Uploaded (Break)</a>
+
+					</div>
+				</div>
+				<div class="content dashboardcontent">
+
+					<div id="loadermain" class="ui active inverted dimmer" style="display:none">
+						<i class="fa fa-times closeicn"></i>
+						<div class="ui indicating progress" data-value="1" data-total="200" style="width: 50%;">
+							<div class="bar">
+								<div class="progress"></div>
+							</div>
+							<div class="label">%</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div class="row">
+
+							<div id="rightsidepanel">
+								<div id="wrapper">
+
+									<div class="parcoords" id="metrics" style="display: none">
+
+										<div id="riskdb" style="display: none">
+											<div class="row">
+												<div class="col-sm threesumcolmn">
+
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe Failures / 100 Miles by Break Year
+														</div>
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map BreakCount & Break Year</p>
+														</div>
+														<div class="back">
+
+															<div class="card-block diagrm ">
+																<div id="chart1"></div>
+
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-sm threesumcolmn">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe Failure Miles by Material (Sum)
+														</div>
+
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map PipeMaterial & Length_Mi</p>
+
+														</div>
+														<div class="back">
+															<div class="card-block diagrm ">
+																<div id="chart2"></div>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+
+												<div class="col-sm threesumcolmn">
+
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe Failure Miles by Material (%)
+														</div>
+
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map PipeMaterial & Length_Mi</p>
+
+														</div>
+														<div class="back">
+															<div class="card-block diagrm ">
+																<div id="chart3"></div>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+											</div>
+
+											<div class="row ">
+												<div class="col-sm threesumcolmn">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe Failure Miles by Failure Cause
+														</div>
+
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map BreakCause & Length_Mi</p>
+
+														</div>
+														<div class="back">
+															<div class="card-block diagrm ">
+																<div id="chart4"></div>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+
+												<div class="col-sm threesumcolmn">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe Failure Miles by Operating Pressure
+														</div>
+
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map OperatingPressure & Length_Mi</p>
+
+														</div>
+														<div class="back">
+															<div class="card-block diagrm ">
+																<div id="chart5"></div>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+
+												<div class="col-sm threesumcolmn">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe Failure Miles by Age
+														</div>
+
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map InstallYear & OBJECTID</p>
+
+														</div>
+														<div class="back">
+															<div class="card-block diagrm ">
+																<div id="chart6"></div>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+											</div>
+											<div class="row ">
+												<div class="col-sm threesumcolmn">
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe failures / 100 Miles by Material
+														</div>
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map PipeMaterial & Length_Mi</p>
+
+														</div>
+														<div class="back">
+															<div class="card-block diagrm ">
+																<div id="chart7"></div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+												<div class="col-sm threesumcolmn">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe Failure Miles by Install Year
+														</div>
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map InstallYear & Length_Mi</p>
+
+														</div>
+														<div class="back">
+															<div class="card-block diagrm ">
+																<div id="chart9"></div>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+
+												<div class="col-sm threesumcolmn">
+
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe failures / 100 Miles by InstallYear&Material
+														</div>
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map PipeMaterial & BreakYear</p>
+
+														</div>
+														<div class="back">
+															<div class="card-block diagrm ">
+																<div id="chart8"></div>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--<iframe style="width: 100%;height: inherit" src="https://xylembidemo.sisense.com/api/demoSession/start/5dc0d017c77ddd2868989334?embed=true&h=false&t=false&l=false&r=true&volatile=false" width="100%" frameborder="0"></iframe>-->
+
+										<div id="breakdb">
+											<div class="row">
+												<div class="col-sm threesumcolmn ndchart">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Total Pipes Analyzed:
+														</div>
+														<div class="indic">
+															<div class="card-block">
+																Pipe Count -
+																<number id="m_1">0</number>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+												<div class="col-sm threesumcolmn  ndchart">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Miles of Pipe Analyzed:
+														</div>
+
+														<div class="indic">
+															<div class="card-block">
+																Miles of Pipe -
+																<number id="m_2">0</number>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm threesumcolmn  ndchart">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Breaks Analyzed:
+														</div>
+
+														<div class="indic">
+															<div class="card-block">
+																Break Count -
+																<number id="m_3">0</number>
+
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm threesumcolmn  ndchart">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Break Count/ 100 miles:
+														</div>
+														<div class="indic">
+															<div class="card-block">
+																Break 100/mi -
+																<number id="m_4">0</number>
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm threesumcolmn ndchart threechart col-lg-3">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															PipeCount By PoF
+														</div>
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map PoFCategory & PipeCount</p>
+														</div>
+														<div class="back">
+															<div class="card-block diagrm chartlineheight">
+																<div id="my_dataviz"></div>
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+												<div class="col-sm threesumcolmn  ndchart threechart col-lg-6">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Breaks per Install Year
+														</div>
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map BreakCount & Install Year</p>
+														</div>
+														<div class="back ">
+															<div class="card-block diagrm chartlineheight">
+																<canvas id="chartjs1" height="220"></canvas>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm threesumcolmn  ndchart threechart col-lg-3">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Pipe Count By Cof Tier
+														</div>
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map PipeCount & CoFCategory</p>
+														</div>
+														<div class="back">
+															<div class="card-block diagrm chartlineheight">
+																<div id="my_dataviz2"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row ">
+												<div class="col-sm threesumcolmn ndchart fourchart">
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Sum Probability By Pipe Diameter
+														</div>
+
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map PipeDiameter & Probability</p>
+
+														</div>
+														<div class="back ">
+															<div class="card-block diagrm ">
+																<canvas id="chartjs3" height="350"></canvas>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+
+												<div class="col-sm threesumcolmn ndchart fourchart">
+
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Sum Probability By PipeMaterial
+														</div>
+
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map PipeMaterial & Probability</p>
+
+														</div>
+														<div class="back ">
+															<div class="card-block diagrm ">
+																<canvas id="chartjs2" height="350"></canvas>
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+												<div class="col-sm threesumcolmn ndchart fourchart">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Sum Probability By CoFCategory
+														</div>
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map Probability & CoFCategory</p>
+														</div>
+														<div class="back ">
+															<div class="card-block diagrm ">
+																<canvas id="chartjs4" height="350"></canvas>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm threesumcolmn ndchart fourchart">
+
+													<div class="card flipper">
+														<div class="card-header card-title">
+															Sum Probability By Contract
+														</div>
+
+
+														<div class="front">
+															<h5>Data Mapping Required</h5>
+															<p>Please Map Contract & Probability</p>
+
+														</div>
+														<div class="back ">
+															<div class="card-block diagrm ">
+																<canvas id="chartjs5" height="350"></canvas>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="leftOptionsPanel showOpt" >
+								<div class="card" id="optionsmain">
+									<div class="param-card card-header card-title cardcol">
+										Options
+									</div>
+									<div class="card-body">
+										<div class="select-div">
+
+											<button type="button" id="dtsrcbtn" class="btn btn-outline-primary mb-3 dtsrc border-btns newbtn">
+												New Data Source</button>
+											<div id="pofyear">
+
+												<div class="input-group mb-3">
+													<div class="input-group-prepend pofyear">
+														<span class="input-group-text chosen-single" id="basic-addon3">PoF_Year</span>
+														<select id="pofyearselect" class="chosen-select datamapping">
+															<option value="" disabled selected>Select PoF_Year</option>
+														</select>
+													</div>
+												</div>
+												<div class="input-group mb-3 ownerselectpanel" style="display: none">
+														<div class="input-group-prepend "
+															style="margin-bottom: 0.4rem!important;">
+															<span class="input-group-text chosen-single" id="basic-addon3">PipeLineOwner</span>
+															<select id="ownerselectpanel" class="chosen-select datamapping">
+																	<option value="" disabled selected>Select PipeLineOwner</option>
+															</select>
+														</div>
+													</div>
+												<div class="input-group mb-3 lengthmilesinput" style="display: none">
+													<div class="input-group-prepend "
+														style="margin-bottom: 0.4rem!important;">
+														<span class="input-group-text chosen-single" id="basic-addon3">Length_Mi</span>
+														<input type="number" id="lengthmilesinput" value="2000" class="form-control"/>
+													</div>
+
+												</div>
+												<div class="input-group mb-3 grouppofyear" style="display: none">
+													<div class="input-group-prepend "
+														style="margin-bottom: 0.4rem!important;">
+														<span class="input-group-text chosen-single" id="basic-addon3">Group By</span>
+														<select id="showattrselect" required multiple
+															class="chosen-select datamapping">
+															<option selected>PipeCount</option>
+															<option>BreakCount</option>
+														</select>
+													</div>
+													<div class="input-group-prepend">
+														<span class="input-group-text chosen-single" id="basic-addon4">PoFCategory</span>
+														<select id="pofcatlist" multiple title="Loading"
+															class="chosen-select datamapping">
+														</select>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="card" id="dataexplorepanel" style="display:none">
+									<div class="param-card card-header card-title cardcol">
+										Attributes
+									</div>
+									<div class="card-body mycardstyle">
+										<ul id="sortable">
+										</ul>
+									</div>
+								</div>
+								<div class="card" id='datamappingMain' style="display:none">
+									<div class="param-card card-header card-title cardcol">
+										Data Mapping
+									</div>
+									<div class="card-body" id="datamappingdiv">
+										<div class="select-div ">
+
+										</div>
+									</div>
+								</div>
+
+								<a id="closeOpt"> <i class="fas fa-times"></i> </a>
+							</div>
+						</div>
+
+					</div>
+					<div id="spatial" style="display: none"></div>
+					<div id="analysis" style="display: none">
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="r-sidebar" id="sidebarDiv2">
+			<a href="#" class="r-sidebar-item" id="r-sidebar-btn1">
+				<i class="material-icons">input</i>
+			</a>
+			<a href="#" class="r-sidebar-item" id="r-sidebar-btn2">
+				<i class="material-icons">view_list</i>
+			</a>
+		</div>
+		<div class="fade-wrap"></div>
+	</div>
+
+	<div class="modal" id="optionmodal" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="justify-content: center;">
+					<h5 class="modal-title"> Please Select Data Source</h5>
+					<a id="exitModalButton1" class="exitModal"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="modal-body">
+					<input type="file" id="fileUpload" hidden />
+					<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+						<button type="button" class="btn btn-primary upld border-btns">Upload Excel/CSV</button>
+						<!-- <button type="button" class="btn btn-primary glb border-btns" data-type="break">Break
+							History</button>
+						<button type="button" class="btn btn-primary glb border-btns" data-type="risk">Risk
+							Analysis</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="modal" id="ownerselectmodal" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="justify-content: center;">
+					<h5 class="modal-title">PipeLineOwner Field Not Exists.</h5>
+					<a id="exitModalButton2" class="exitModal"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="modal-body">
+					   <div class="content represent">
+							<p style="font-weight: 400;">Please Select Pipe Length and '+name_rep+' Representation</p>
+							   <div class="input-group mb-3">
+									<div class="input-group-prepend "
+										style="margin-bottom: 0.4rem!important;">
+										<span class="input-group-text chosen-single" id="basic-addon3">PipeLineOwner</span>
+										<select id="ownerselect" class="chosen-select btn mb-3 selectview">
+												<option value="" disabled selected>Select Field</option>
+											</select>
+									</div>
+								</div>
+								<div class="input-group mb-3">
+										<div class="input-group-prepend "
+											style="margin-bottom: 0.4rem!important;">
+											<span class="input-group-text chosen-single" id="basic-addon3">Pipe Length </span>
+											<input type="number" id="lengthpipe" value="2000"/>
+										</div>
+
+									</div>
+					   </div>
+					   <div class="content">
+						<input type="button" id="saveowner" value="Save" class="btn" style="width: 200px;"/>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="errormodal" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="justify-content: center;">
+					<h5 class="modal-title">Oops Error!</h5>
+					<a id="exitModalButton3" class="exitModal"><i class="fas fa-times"></i></a>
+
+				</div>
+				<div class="modal-body">
+					<h4>
+
+					</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+	</script>
+	<script src="js/module.js"></script>
+	<script type="text/javascript" src="dist/jquery.mmenu.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('nav#menu').mmenu();
+		});
+	</script>
+
+	<script type="text/javascript" src="js/dashboard_cus.js"></script>
+	<script type="text/javascript" src="js/xls.core.min.js"></script>
+	<script type="text/javascript" src="js/xlsx.core.min.js"></script>
+	<script type="text/javascript" src="js/dashboard_config.js"></script>
+	<script type="text/javascript" src="js/parallel_config.js"></script>
+	<script type="text/javascript" src="js/parallel_cus.js"></script>
+	<script type="text/javascript" src="js/chartjs.js"></script>
+	<script type="text/javascript" src="js/chartjs-label.js"></script>
+	<script type="text/javascript" src="js/filtermodule.js"></script>
+	<script type="text/javascript" src="js/dashboard_chartjs.js"></script>
+	<script type="text/javascript">
+		"use strict";
+		var rightSidebarState = [0,0];
+
+
+		var isMobileDevice = function() {
+				return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+		}
+		let redraw = function(){};
+		var treemap = function () {
+		return {
+		init: function init() {
+		}
+		};
+		}();
+			var treemap2 = function () {
+			return {
+			init: function init() {
+			}
+			};
+			}();
+		var Dashboard = function () {
+			var menuChangeActive = function menuChangeActive(el) {
+				var hasSubmenu = $(el).hasClass("has-submenu");
+				$(".modulebar .c-menu .is-active").removeClass("is-active");
+				$(el).addClass("is-active");
+			};
+			var sidebarChangeWidth = function sidebarChangeWidth() {
+				var $menuItemsTitle = $("li .menu-item__title");
+				$("body").toggleClass("sidebar-is-reduced sidebar-is-expanded");
+				$(".l-header .hamburger-toggle").toggleClass("is-opened");
+				setTimeout(function(){
+					 treemap.init();
+					 treemap2.init();
+				},400)
+			};
+			var sidebarChangeWidth_Inner = function sidebarChangeWidth_Inner() {
+				$(".user-dashboard .hamburger-toggle").toggleClass("is-opened");
+				$("body").toggleClass("innersidebar-is-expanded");
+				setTimeout(function(){
+				treemap.init();
+				treemap2.init();
+				},400)
+			};
+			return {
+				init: function init() {
+					if(isMobileDevice()){
+						$("#analysisDivIcon").hide();
+					}
+					$("#underheader").hide();
+					$("#bg-card").hide();
+					$("#hamburgerDiv").hide();
+					$("#sidebarDiv").hide();
+					$("#sidebarDiv2").hide();
+
+
+					$("#dtsrcbtn").on("click",function () {
+						$("#riskactive").removeClass("risk-break-active");
+						$("#breakactive").removeClass("risk-break-active");
+
+					});
+
+					$("#exitModalButton1").on("click",function () {
+						$("#optionmodal").modal("hide");
+					});
+					$("#exitModalButton2").on("click",function () {
+						$("#ownerselectmodal").modal("hide");
+					});
+					$("#exitModalButton3").on("click",function () {
+						$("#errormodal").modal("hide");
+					});
+
+					$("#r-sidebar-btn1").on("click",function () {
+						$("body").toggleClass("menu-toggle-switch1");
+						$("body").toggleClass("menu-toggle-switch1-not");
+						if($("body").hasClass('menu-toggle-switch2')) {
+							$("body").toggleClass("menu-toggle-switch2");
+						   $("body").toggleClass("menu-toggle-switch2-not");
+						}
+						setTimeout(function(){
+						treemap.init();
+						treemap2.init();
+					},100)
+					});
+					$("#r-sidebar-btn2").on("click",function () {
+						$("body").toggleClass("menu-toggle-switch2");
+						$("body").toggleClass("menu-toggle-switch2-not");
+						if($("body").hasClass('menu-toggle-switch1')) {
+							$("body").toggleClass("menu-toggle-switch1");
+						   $("body").toggleClass("menu-toggle-switch1-not");
+						}
+						setTimeout(function(){
+						treemap.init();
+						treemap2.init();
+					},100)
+					})
+
+					$("#closeOpt").on("click",function () {
+						$("body").removeClass("menu-toggle-switch1");
+						$("body").removeClass("menu-toggle-switch2");
+						$("body").addClass("menu-toggle-switch1-not");
+						$("body").addClass("menu-toggle-switch2-not");
+						setTimeout(function(){
+						treemap.init();
+						treemap2.init();
+					},100)
+					})
+					$("#launch-btn").on("click",function () {
+						$(".bg-img").hide();
+						$("#main-content-div").addClass("main-content-div-relative");
+						if(isMobileDevice()){
+							$("#analysisDivIcon").hide();
+							$("#spatialAn").click();
+						} else {
+							$("#spatialAn").click();
+						}
+						$("#bg-main").removeClass("home-screen");
+					})
+					$(".l-header .js-hamburger").on("click", sidebarChangeWidth);
+					$("#oldHamb").on("click", sidebarChangeWidth_Inner);
+					$("#newHamb").on("click",function () {
+						$(".leftOptionsPanel").toggleClass("showOpt");
+						$("#innerHambNew").toggleClass("is-opened");
+					});
+					$(".modulebar .js-menu li").on("click", function (e) {
+						let mod = e.currentTarget.attributes["data-module"].value;
+						if(mod == "Meters_analysis" || mod == "metrics" || mod == "spatial"){
+							$("#sidebarDiv").show();
+							$("#underheader").show();
+							$(".bg-img").hide();
+							if(mod == "Meters_analysis"){
+                                $(".moveHamburger").hide();
+                                $(".risk-break-switch").hide();
+                                $("#newHamb").hide();
+                                $("#sidebarDiv2").hide();
+                                $("#titleDiv").hide();
+                                $("body").removeClass('spatialView');
+
+//								$("#bg-card").show();
+							}else if(mod== "spatial"){
+								$(".moveHamburger").hide();
+								$(".risk-break-switch").hide();
+								$("#newHamb").hide();
+								$("#sidebarDiv2").hide();
+								$("#titleDiv").hide();
+								$("body").addClass('spatialView');
+
+							} else if(mod == "metrics") {
+								$(".moveHamburger").show();
+								$(".risk-break-switch").show();
+								$("#newHamb").show();
+
+								$("#sidebarDiv2").show();
+								$("#titleDiv").show();
+								$("body").removeClass('spatialView');
+							}
+							$("#hamburgerDiv").show();
+						}
+
+						$("#bg-main").removeClass("home-screen");
+						menuChangeActive(e.currentTarget);
+					});
+				}
+			};
+		}();
+		Dashboard.init();
+		$(window).resize(function() {
+		if(this.resizeTO) clearTimeout(this.resizeTO);
+		this.resizeTO = setTimeout(function() {
+		treemap.init();
+		treemap2.init();
+		}, 500);
+		});
+		$('#themetype').chosen();
+		$('#themetype').change(function () {
+			var text = $('#themetype').val();
+			if (text == 'light') {
+				theme_var.theme_light();
+				$("#themetype").selectedIndex = 0;
+			} else if (text == 'dark') {
+				theme_var.theme_dark();
+				$("#themetype").selectedIndex = 1;
+			}
+            
+			Draw_Dashboard_2ndSource(tempmaindt,currentsourceoffilter);
+		});
+		var currentTheme = $("#themetype").val();
+		if (currentTheme == "light") {
+			theme_var.theme_light();
+			$("#themetype").val("light");
+		} else if(currentTheme == "dark"){
+			theme_var.theme_dark();
+			$("#themetype").val("dark");
+		} else {
+//			localStorage.setItem("current-theme", "light");
+			theme_var.theme_light();
+			$("#themetype").val("light");
+		}
+		$(".js-hamburger").click();
+
+
+        if (navigator.appName == "Microsoft Internet Explorer") {
+            alert('You are using an unsupported browser. Please switch to Chrome or MS Edge browser. Thanks!')
+        }
+
+
+	</script>
+</body>
+
+</html>
